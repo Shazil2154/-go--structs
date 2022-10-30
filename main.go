@@ -22,7 +22,12 @@ func main() {
 			zipCode: 94000,
 		},
 	}
+	jim.updateName("Jimmy")
 	jim.print()
+}
+
+func (p *person) updateName(firstName string) {
+	(*p).firstName = firstName
 }
 
 func (p person) print() {
